@@ -1,0 +1,32 @@
+%btn {
+  border: 2px solid white;
+  padding: 5px 10px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, .3);
+}
+
+%btnWhite {
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 1);
+  padding: 5px 10px;
+  border-radius: 50px;
+  color: #000;
+}
+
+%pseudo {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
+%cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}

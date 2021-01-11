@@ -1,0 +1,109 @@
+header.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 53px;
+  @extend %flex-column;
+
+  & .header__top {
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    padding-bottom: 12px;
+    position: relative;
+    //&::before{
+    //  @extend %pseudo;
+    //  width: 173px;
+    //  height: 186px;
+    //  left: -200px;
+    //  top: -200px;
+    //  background-image: url(../img/first-slides/slide-1/slide-1.png);
+    //  background-size: contain;
+    //  background-repeat: no-repeat;
+    //  background-position: 50% 50%;
+    //}
+
+    & .container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      position: relative;
+      @media (min-width: $smDesktopWidth) {
+        align-items: center;
+      }
+    }
+
+    @media (min-width: $smDesktopWidth) {
+      border-bottom: none;
+    }
+  }
+
+  & .header__menu {
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    background-color: rgba(255, 255, 255, .1);
+  }
+
+  & .logo {
+    width: 100px;
+    padding: 7px;
+    background-color: #fff;
+    border-radius: 0px 0px 7px 7px;
+    @media (min-width: $smDesktopWidth) {
+      width: 180px;
+    }
+    @media (min-width: $desktopWidth) {
+      width: 319px;
+      padding: 11px 20px 20px;
+      border-radius: 0px 0px 15px 15px;
+    }
+  }
+
+  & .contact__link--block{
+    @media (min-width: $smDesktopWidth){
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  & span.mail{
+    color: #fff;
+   }
+
+  & .button {
+    @extend %btnWhite;
+    position: relative;
+    z-index: 1;
+    transition: all .3s ease;
+    transform: translateY(0);
+    &.btn-up{
+      transform: translateY(-300%);
+    }
+    @media (min-width: $smDesktopWidth) {
+      background: rgba(255, 255, 255, 0.3);
+      border: 2px solid rgba(255, 255, 255, .3);
+      color: #fff;
+      font-size: $fz3;
+      padding: 11px 28px;
+    }
+  }
+
+  &::before{
+    @extend %pseudo;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background: radial-gradient(50% 50% at 50% 50%, #E69317 41.15%, #E66A17 100%);
+    @media (min-width: $smDesktopWidth) {
+      background: radial-gradient(50% 50% at 50% 50%, #E69317 41.15%, #E66A17 100%), #E48F20;
+    }
+  }
+
+  @media (min-width: $smDesktopWidth) {
+    height: 120px;
+  }
+
+  @media (min-width: $desktopWidth) {
+    padding-bottom: 0px;
+    height: 200px;
+  }
+}

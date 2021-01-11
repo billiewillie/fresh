@@ -1,0 +1,33 @@
+section.touch {
+  padding: 37px 0;
+  position: relative;
+  background-image: radial-gradient(50% 50% at 50% 50%, #E69317 41.15%, #E66A17 100%);
+
+  & .container {
+    @extend %flex-column;
+    align-items: center;
+  }
+
+  & h2.title{
+    color: #fff;
+    margin-bottom: 25px;
+    @media (min-width: $desktopWidth) {
+      margin-bottom: 40px;
+    }
+  }
+
+  & .button{
+    @extend %btnWhite;
+    font-size: 18px;
+    padding: 14px 41px;
+    @media (min-width: $desktopWidth) {
+      background: rgba(255, 255, 255, 0.3);
+      border: 2px solid rgba(255, 255, 255, .3);
+      color: #fff;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    padding: 58px 0 75px;
+  }
+}

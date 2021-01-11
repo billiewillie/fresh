@@ -1,0 +1,52 @@
+form.form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  & .form__field {
+    margin-bottom: 30px;
+    position: relative;
+    text-align: center;
+
+    & input[type="text"] {
+      font-family: $mainFont;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      width: 100%;
+      border-radius: 5px;
+      background-color: transparent;
+      padding: 15px 20px;
+      color: #fff;
+      font-size: $fz3;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      @media (min-width: $smDesktopWidth) {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+      }
+
+    }
+
+    & input[type="submit"] {
+      font-family: $mainFont;
+      @extend %btn;
+      color: #fff;
+      font-size: $fz3;
+      padding: 11px 28px;
+      cursor: pointer;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+}

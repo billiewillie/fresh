@@ -1,0 +1,265 @@
+footer.footer {
+  background-color: $bgDark;
+  color: $textGrayDark;
+
+  & .footer__menu {
+    border-top: 1px solid rgba(118, 129, 139, .3);
+    border-bottom: 1px solid rgba(118, 129, 139, .3);
+  }
+
+  & .menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    & li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1 1 auto;
+
+      & a {
+        color: $textGrayDark;
+        @media (min-width: $smDesktopWidth) {
+          padding: 10px 0 8px;
+          font-size: $fz2;
+        }
+        @media (min-width: $desktopWidth) {
+          font-size: $fz3;
+        }
+      }
+
+      &:not(:last-child):after {
+        content: "●";
+        margin: auto;
+        color: $textGrayDark;
+        font-size: 10px;
+      }
+
+      &:last-child {
+        flex: 0;
+      }
+    }
+  }
+
+  & .footer__bottom {
+    padding-top: 25px;
+    font-size: $fz2;
+
+    & .container {
+      @extend %flex-column;
+      position: relative;
+      @media (min-width: $tablet) {
+        padding-left: 200px;
+      }
+      @media (min-width: $smDesktopWidth) {
+        padding-left: 280px;
+      }
+      @media (min-width: $desktopWidth) {
+        padding-left: 326px;
+      }
+    }
+
+    @media (min-width: $smDesktopWidth) {
+      padding-top: 40px;
+      font-size: $fz3;
+    }
+  }
+
+  & .logo-block {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+
+    & .logo {
+      width: 100px;
+      padding: 7px;
+      background-color: #fff;
+      border-radius: 7px 7px 0px 0px;
+      @media (min-width: $tablet) {
+        width: 170px;
+      }
+      @media (min-width: $smDesktopWidth) {
+        width: 240px;
+        padding: 11px 20px 20px;
+        border-radius: 15px 15px 0px 0px;
+      }
+      @media (min-width: $desktopWidth) {
+        width: 269px;
+      }
+    }
+  }
+
+  & .address {
+    @extend %flex-column;
+    margin-bottom: 15px;
+
+    & p {
+      padding-left: 17px;
+      position: relative;
+      font-size: $fz1;
+
+      &:nth-child(1) {
+        margin-bottom: 12px;
+        &::before {
+          left: 0;
+          top: -3px;
+          @media (min-width: $smDesktopWidth) {
+            width: 14px;
+            height: 18px;
+            top: -2px;
+          }
+          @media (min-width: $desktopWidth) {
+            width: 18px;
+            height: 22px;
+            top: -1px;
+            top: -1px;
+          }
+        }
+      }
+
+      &::before {
+        @extend %pseudo;
+        background-image: url('../../img/icons/location-gray.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+        width: 12px;
+        height: 14px;
+        left: 0;
+        top: -3px;
+        @media (min-width: $tablet) {
+          left: 4px;
+          top: 5px;
+        }
+        @media (min-width: $desktopWidth) {
+          top: 9px;
+        }
+      }
+
+      @media (min-width: $smDesktopWidth) {
+        padding-left: 20px;
+        font-size: $fz2;
+      }
+      @media (min-width: $desktopWidth) {
+        padding-left: 22px;
+        font-size: $fz3;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      text-align: left;
+      & p {
+        &:nth-child(1) {
+          margin-right: 10px;
+          margin-bottom: 0px;
+        }
+        &:nth-child(2) {
+          &::before {
+            width: 4px;
+            height: 4px;
+            background-image: none;
+            background-color: $textGrayDark;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    @media (min-width: $smDesktopWidth) {
+      margin-bottom: 25px;
+    }
+  }
+
+  & .footer__contacts {
+    @extend %flex-column;
+    padding-bottom: 12px;
+
+    & p {
+      position: relative;
+      font-size: $fz1;
+
+      &:nth-child(1) {
+        margin-bottom: 12px;
+        padding-left: 17px;
+
+        &::before {
+          @extend %pseudo;
+          background-image: url('../../img/icons/mail-gray.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: 50% 50%;
+          width: 12px;
+          height: 10px;
+          left: 0;
+          top: 0;
+          @media (min-width: $smDesktopWidth) {
+            width: 22px;
+            height: 18px;
+            left: 0;
+            top: -2px;
+          }
+          @media (min-width: $desktopWidth) {
+            top: 1px;
+          }
+        }
+        @media (min-width: $smDesktopWidth) {
+          padding-left: 25px;
+        }
+        @media (min-width: $desktopWidth) {
+          margin-right: 60px;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 35px;
+        @media (min-width: $desktopWidth) {
+          margin-right: 60px;
+        }
+      }
+
+      &.made {
+        padding-left: 115px;
+
+        & a {
+          text-decoration: underline;
+          color: $textGrayDark;
+        }
+      }
+      @media (min-width: $smDesktopWidth) {
+        font-size: $fz2;
+      }
+      @media (min-width: $desktopWidth) {
+        font-size: $fz3;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      padding-bottom: 15px;
+      & p {
+        &:nth-child(1) {
+          order: 2;
+          margin-right: 30px;
+          margin-bottom: 0px;
+          text-align: left;
+        }
+
+        &:nth-child(2) {
+          order: 1;
+          margin-right: 30px;
+          margin-bottom: 0px;
+          text-align: left;
+        }
+
+        &.made {
+          order: 3;
+          padding-left: 0;
+        }
+      }
+    }
+    @media (min-width: $smDesktopWidth) {
+      padding-bottom: 25px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.menu{
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 0;
+  & li{
+    & a{
+      color: #fff;
+      font-size: 28px;
+    }
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .menu {
+    flex-direction: row;
+    li {
+      a {
+        padding: 10px 0px;
+        font-size: 28px;
+      }
+    }
+  }
+}

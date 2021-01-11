@@ -1,0 +1,8 @@
+.main{
+  & section.contacts{
+    @media (min-width: $smDesktopWidth) {
+      padding: 0px 0 160px;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+ul.socials{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 30px;
+  align-items: center;
+  max-width: 200px;
+  width: 100%;
+  & li.item{
+    width: 25%;
+    text-align: center;
+    & a{
+      width: 32px;
+      height: 32px;
+      text-align: center;
+      border-radius: 50%;
+      display: block;
+      margin: auto;
+      font-size: 0;
+      background-size: 50% 50%;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      & img{
+        max-width: 45%;
+      }
+    }
+    &:nth-child(2){
+      & a{
+        background-image: url('/assets/img/vk.svg');
+      }
+    }
+  }
+}

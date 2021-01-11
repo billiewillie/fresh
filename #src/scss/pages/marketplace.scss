@@ -1,0 +1,187 @@
+.marketplace{
+  padding: 0;
+  & .container{
+    @extend %flex-column;
+  }
+  & .marketplace__item{
+    @extend %flex-column;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(118, 129, 139, .3);
+    & .marketplace__item--top{
+      @extend %flex-column;
+      margin-bottom: 30px;
+      & .marketplace__item--about{
+        width: 100%;
+        margin-bottom: 30px;
+        & .marketplace__item--logo{
+          margin-bottom: 20px;
+          width: 60%;
+          @media (min-width: $tablet) {
+            margin-bottom: 30px;
+            height: 73px;
+          }
+          @media (min-width: $smDesktopWidth) {
+            height: 94px;
+          }
+        }
+        & .marketplace__item--text{
+          font-size: $fz2;
+          letter-spacing: .5px;
+          line-height: 1.5;
+          color: $textGrayDark;
+          @media (min-width: $smDesktopWidth) {
+            font-size: $fz3;
+          }
+        }
+        @media (min-width: $tablet) {
+          padding-right: 45px;
+        }
+      }
+      & .marketplace__item--review{
+        & .review__title{
+          font-size: $fz2;
+          margin-bottom: 20px;
+          @media (min-width: $tablet) {
+            height: 73px;
+            display: flex;
+            flex-direction: column-reverse;
+            margin-bottom: 30px;
+          }
+          @media (min-width: $smDesktopWidth) {
+            font-size: $fz4;
+            height: 94px;
+          }
+        }
+        & .review{
+          background-color: $cardColor;
+          border: 2px solid #FFFFFF;
+          padding: 30px 20px 30px 40px;
+          box-shadow: 0px 5px 15px rgba(118, 129, 139, 0.25);
+          border-radius: 20px;
+          font-size: $fz2;
+          & .review__text{
+            font-style: italic;
+            position: relative;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            letter-spacing: .4px;
+            &::before{
+              @extend %pseudo;
+              content: "“";
+              left: -20px;
+              top: 0;
+              font-size: 40px;
+              line-height: 1.2;
+              font-style: normal;
+              color: $textGrayDark;
+              @media (min-width: $smDesktopWidth) {
+                font-size: 90px;
+                left: -50px;
+                top: -15px;
+              }
+            }
+          }
+          & .review__from{
+            text-align: right;
+            & .review__from--position{
+              color: $textGrayDark;
+              margin-bottom: 5px;
+            }
+          }
+          @media (min-width: $smDesktopWidth) {
+            font-size: $fz3;
+            padding: 45px 30px 35px 80px;
+            box-shadow: 0px 15px 35px rgba(118, 129, 139, 0.25);
+          }
+        }
+        @media (min-width: $smDesktopWidth) {
+          width: 50%;
+        }
+      }
+      &.marketplace__item--review{
+        & .marketplace__item--about,
+        & .marketplace__item--review{
+          @media (min-width: $tablet) {
+            width: 50%;
+          }
+        }
+      }
+      @media (min-width: $tablet) {
+        flex-direction: row;
+      }
+    }
+    & .marketplace__item--address{
+      @extend %flex-column;
+      & .address__title{
+        margin-bottom: 20px;
+        font-size: $fz2;
+        @media (min-width: $smDesktopWidth) {
+          font-size: $fz4;
+          margin-bottom: 33px;
+        }
+      }
+      & .address__list{
+        @extend %flex-column;
+        & .address__item{
+          margin-bottom: 20px;
+          padding-left: 25px;
+          position: relative;
+          font-size: $fz2;
+          &:last-child{
+            margin-bottom: 0;
+          }
+          &::before{
+            @extend %pseudo;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            background-color: $cardColor;
+            @media (min-width: $smDesktopWidth) {
+              width: 30px;
+              height: 30px;
+              top: -4px;
+            }
+          }
+          &::after{
+            @extend %pseudo;
+            width: 8px;
+            height: 6px;
+            left: 4px;
+            top: 4px;
+            background-image: url('../img/icons/check-address.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            @media (min-width: $smDesktopWidth) {
+              width: 14px;
+              height: 10px;
+              left: 10px;
+              top: 6px;
+            }
+          }
+          @media (min-width: $tablet) {
+            width: 50%;
+            margin-bottom: 40px;
+          }
+          @media (min-width: $smDesktopWidth) {
+            width: 33.33%;
+            padding-left: 45px;
+            font-size: $fz3;
+            padding-right: 10px;
+          }
+        }
+        @media (min-width: $tablet) {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+    }
+    @media (min-width: $smDesktopWidth) {
+      padding: 80px 0;
+    }
+  }
+  @media (min-width: $smDesktopWidth) {
+    padding: 0 0 160px;
+  }
+}

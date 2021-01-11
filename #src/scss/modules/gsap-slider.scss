@@ -1,0 +1,532 @@
+/* =Project Slides */
+.projects {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  visibility: hidden;
+  opacity: 0%;
+}
+
+.project {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+
+@keyframes move1 {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(-190deg) translate(-5px, -5px);
+  }
+  100% {
+    transform: rotate(-360deg) translate(0, 0);
+  }
+}
+
+@keyframes move2 {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(-190deg) translate(-5px, 7px);
+  }
+  100% {
+    transform: rotate(-360deg) translate(0, 0);
+  }
+}
+
+.project-image {
+  position: absolute;
+  width: 80%;
+  left: 40%;
+  bottom: -20px;
+  z-index: 0;
+  @media (min-width: $desktopWidth) {
+    width: 60%;
+    left: 45%;
+  }
+  @media (min-width: $lgDesktopWidth) {
+    width: 76%;
+    left: 40%;
+  }
+}
+
+.project-image img {
+  position: relative;
+  z-index: 4;
+  display: block;
+}
+
+.button-container {
+  position: relative;
+}
+
+button.btn.next {
+  left: auto;
+  right: 0;
+}
+
+button.btn.prev:before {
+  content: "\2039";
+  left: 23px;
+}
+
+button.btn.next:before {
+  content: "\203a";
+  left: 28px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10vh;
+  left: 0;
+  right: 0;
+  top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 20px;
+  height: 20px;
+  text-indent: -9999em;
+  overflow: hidden;
+  border: none;
+  border-radius: 100%;
+  transition: all 0.3s linear;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.dot:focus,
+.dot:active,
+.dot:hover {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.dot.active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.spot {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 1);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 5px;
+  z-index: 0;
+}
+
+.ingredient-green{
+  width: 74px;
+  height: 70px;
+}
+
+.project__ingredients--intro{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  & > *{
+    position: absolute;
+    display: block;
+  }
+  & .ingredient-1{
+    width: 173px;
+    height: 186px;
+    left: -200px;
+    top: -300px;
+  }
+  & .ingredient-2{
+    left: -120px;
+    top: 310px;
+    transform: rotate(-130deg);
+  }
+  & .ingredient-3{
+    width: 200px;
+    height: 179px;
+    left: 10px;
+    bottom: -80px;
+  }
+  & .ingredient-4{
+    width: 148px;
+    height: 140px;
+    left: 270px;
+    bottom: -30px;
+    @media (min-width: $desktopWidth) {
+      width: 193px;
+      left: 400px;
+      bottom: 25px;
+    }
+    @media (min-width: $lgDesktopWidth) {
+      left: 335px;
+    }
+  }
+  & .ingredient-5{
+    left: 330px;
+    bottom: 40%;
+    transform: rotate(-45deg);
+    @media (min-width: $desktopWidth) {
+      left: 560px;
+      bottom: 50%;
+    }
+    @media (min-width: $lgDesktopWidth) {
+      left: 510px;
+    }
+  }
+  & .ingredient-6{
+    left: 200px;
+    bottom: 0px;
+    transform: rotate(10deg);
+    @media (min-width: $desktopWidth) {
+      left: 235px;
+    }
+    @media (min-width: $lgDesktopWidth) {
+      bottom: 50px;
+    }
+  }
+  & .ingredient-7{
+    left: 450px;
+    top: -45px;
+    @media (min-width: $desktopWidth) {
+      left: 650px;
+    }
+  }
+  & .ingredient-8{
+    right: -80px;
+    bottom: 50%;
+    transform: rotate(-60deg);
+    @media (min-width: $desktopWidth) {
+      right: -20px;
+    }
+    @media (min-width: $lgDesktopWidth) {
+      right: -80px;
+    }
+  }
+  & .ingredient-9{
+    width: 179px;
+    height: 144px;
+    right: -160px;
+    top: 0;
+    @media (min-width: $desktopWidth) {
+      right: -80px;
+    }
+    @media (min-width: $lgDesktopWidth) {
+      right: -140px;
+      top: 15%;
+    }
+  }
+  & .ingredient-10{
+    width: 110px;
+    height: 89px;
+    left: 450px;
+    bottom: 50%;
+    @media (min-width: $desktopWidth) {
+      left: 630px;
+    }
+  }
+  & .ingredient-11{
+    width: 166px;
+    height: 109px;
+    right: -75px;
+    bottom: -25px;
+    @media (min-width: $desktopWidth) {
+      right: -25px;
+    }
+    @media (min-width: $lgDesktopWidth) {
+      right: -60px;
+    }
+  }
+}
+
+.project__ingredients--outro{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  & > *{
+    position: absolute;
+    display: block;
+  }
+  & .ingredient-1{
+    width: 420px;
+    height: 370px;
+    left: -160px;
+    top: 0;
+  }
+  & .ingredient-2{
+    width: 360px;
+    height: 290px;
+    left: -60px;
+    bottom: -80px;
+  }
+  & .ingredient-3{
+    width: 290px;
+    height: 370px;
+    right: -170px;
+    top: 10%;
+    transform: rotate(-150deg);
+  }
+  & .ingredient-4{
+    right: 30px;
+    top: 10%;
+    transform: rotate(-120deg);
+  }
+  & .ingredient-5{
+    width: 420px;
+    height: 370px;
+    right: -170px;
+    bottom: 15%
+  }
+  & .ingredient-6{
+    width: 183px;
+    height: 149px;
+    right: 20px;
+    bottom: -100px;
+  }
+  & .ingredient-7{
+    width: 197px;
+    height: 155px;
+    right: 20px;
+    top: -290px;
+  }
+}
+
+.project01{
+  & .project__ingredients--intro{
+    & .ingredient-1{
+      width: auto;
+      height: auto;
+      left: -450px;
+      top: -380px;
+    }
+    & .ingredient-2{
+      left: -250px;
+    }
+    & .ingredient-3{
+      width: 126px;
+      height: 131px;
+      left: -150px;
+      top: 210px;
+    }
+    & .ingredient-4{
+      width: auto;
+      height: auto;
+      left: 40px;
+      bottom: -175px;
+      @media (min-width: $desktopWidth) {
+        width: auto;
+        height: auto;
+        bottom: -250px;
+      }
+      @media (min-width: $lgDesktopWidth) {
+        bottom: -175px;
+      }
+    }
+    & .ingredient-5{
+      left: 330px;
+      bottom: 40%;
+      transform: rotate(-45deg);
+      @media (min-width: $desktopWidth) {
+        left: 560px;
+        bottom: 50%;
+      }
+      @media (min-width: $lgDesktopWidth) {
+        left: 510px;
+      }
+    }
+    & .ingredient-6{
+      width: 166px;
+      height: 173px;
+      left: 65%;
+      bottom: -90px;
+      transform: none;
+      @media (min-width: $desktopWidth) {
+        left: 65%;
+      }
+      @media (min-width: $lgDesktopWidth) {
+        bottom: -90px;
+      }
+    }
+    & .ingredient-7{
+      width: 134px;
+      height: 139px;
+      left: auto;
+      top: auto;
+      bottom: 20%;
+      right: 0;
+      @media (min-width: $desktopWidth) {
+        left: auto;
+      }
+    }
+    & .ingredient-8{
+      bottom: 60%;
+    }
+  }
+
+  & .project__ingredients--outro{
+    & .ingredient-1{
+      width: auto;
+      height: auto;
+      left: 0px;
+      top: 0;
+    }
+    & .ingredient-2{
+      width: auto;
+      height: auto;
+      left: -180px;
+      bottom: -80px;
+    }
+    & .ingredient-3{
+      width: auto;
+      height: auto;
+      right: -180px;
+      top: -65%;
+      transform: none;
+    }
+    & .ingredient-4{
+      width: auto;
+      height: auto;
+      right: -150px;
+      top: 10%;
+      transform: none;
+    }
+  }
+}
+
+.project02{
+  & h2.title{
+    @media (min-width: $desktopWidth) {
+      font-size: 60px;
+    }
+    @media (min-width: $lgDesktopWidth) {
+      font-size: $fzTitleLg;
+    }
+  }
+  & p.subtitle,
+  & p.list__title{
+    @media (min-width: $desktopWidth) {
+      font-size: 30px;
+    }
+    @media (min-width: $lgDesktopWidth) {
+      font-size: $fz4;
+    }
+  }
+  & .project__ingredients--intro{
+    & .ingredient-1{
+      width: 230px;
+      height: 168px;
+      left: -270px;
+      top: -220px;
+      transform: rotate(190deg);
+    }
+    & .ingredient-2{
+      left: -160px;
+      top: 350px;
+    }
+    & .ingredient-3{
+      width: 419px;
+      height: 306px;
+      left: -350px;
+      bottom: -60px;
+    }
+    & .ingredient-4{
+      width: 260px;
+      height: 165px;
+      left: 180px;
+      bottom: -80px;
+      transform: rotate(-70deg);
+      @media (min-width: $desktopWidth) {
+        left: 350px;
+        bottom: -80px;
+      }
+      @media (min-width: $lgDesktopWidth) {
+        left: 240px;
+        bottom: -40px;
+      }
+    }
+    & .ingredient-5{
+      left: 330px;
+      bottom: 40%;
+      transform: rotate(-45deg);
+      @media (min-width: $desktopWidth) {
+        left: 560px;
+        bottom: 50%;
+      }
+      @media (min-width: $lgDesktopWidth) {
+        left: 510px;
+      }
+    }
+    & .ingredient-6{
+      left: 10%;
+      bottom: 0;
+      transform: none;
+      @media (min-width: $desktopWidth) {
+        bottom: -40px;
+      }
+      @media (min-width: $lgDesktopWidth) {
+        bottom: 100px;
+      }
+    }
+    & .ingredient-7{
+      width: 200px;
+      height: 146px;
+      left: 470px;
+      top: 70px;
+      transform: rotate(-60deg);
+      @media (min-width: $desktopWidth) {
+        left: 600px;
+        top: 100px;
+      }
+    }
+    & .ingredient-8{
+      bottom: 60%;
+    }
+    & .ingredient-11{
+      right: 10px;
+      bottom: 40px;
+      @media (min-width: $desktopWidth) {
+        right: 140px;
+      }
+      @media (min-width: $lgDesktopWidth) {
+        right: 55px;
+        bottom: 90px;
+      }
+    }
+  }
+
+  & .project__ingredients--outro{
+    & .ingredient-1{
+      width: 720px;
+      height: 459px;
+      left: -450px;
+      top: -130px;
+    }
+    & .ingredient-2{
+      width: 409px;
+      height: 261px;
+      right: -180px;
+      left: auto;
+      top: -340px;
+      bottom: auto;
+      transform: rotate(135deg);
+    }
+    & .ingredient-3{
+      width: auto;
+      height: auto;
+      right: -360px;
+      top: 0;
+      transform: none;
+    }
+  }
+}
