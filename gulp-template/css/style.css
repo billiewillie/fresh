@@ -1564,11 +1564,10 @@ section.contacts .contacts__map iframe {
 /* =Project Slides */
 
 .projects {
-  height: 100%;
   width: 100%;
   position: relative;
   visibility: hidden;
-  opacity: 0%;
+  opacity: 0;
 }
 
 .project {

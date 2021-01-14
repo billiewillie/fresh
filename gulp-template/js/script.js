@@ -40,6 +40,8 @@ function gsapSliderInit() {
 
   let currentStep = 0
   const totalSlides = document.querySelectorAll('.project').length
+  const firstHeight = first.offsetHeight
+  const projectsHeight = document.querySelector('.projects').style.height = `${firstHeight-60}px`
   const wrapper = gsap.utils.wrap(0, totalSlides)
   createTimeLineIn('next', currentStep)
 
@@ -383,4 +385,9 @@ window.initSliders = function () {
 
 window.initSliders()
 
+// (function height() {
+//   if('.first-screen'){
+//
+//   }
+// })()
 
