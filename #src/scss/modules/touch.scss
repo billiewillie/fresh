@@ -18,12 +18,13 @@ section.touch {
 
   & .button{
     @extend %btnWhite;
-    font-size: 18px;
+    font-size: $fz2;
     padding: 14px 41px;
     @media (min-width: $desktopWidth) {
       background: rgba(255, 255, 255, 0.3);
       border: 2px solid rgba(255, 255, 255, .3);
       color: #fff;
+      font-size: $fz3;
     }
   }
 

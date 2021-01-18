@@ -465,6 +465,7 @@ header.header .button {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
+  cursor: pointer;
 }
 
 header.header .button.btn-up {
@@ -1196,6 +1197,9 @@ section.contacts .contacts__map iframe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   width: 80%;
 }
 
@@ -2617,10 +2621,6 @@ section.partners .container {
   background-repeat: no-repeat;
 }
 
-.products .products__catalog {
-  margin-bottom: 70px;
-}
-
 .products .products__catalog .products__catalog--choice {
   margin-bottom: 20px;
 }
@@ -2870,6 +2870,23 @@ section.partners .container {
   background-image: url(../img/icons/microwave-icon.svg);
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.products-catalog {
+  padding: 50px 0 0px;
+}
+
+.product__page--slider {
+  padding: 40px 0;
+}
+
+.product__page--slider .products__block {
+  width: 100%;
+}
+
+.product__page--slider .products__block h3.products__block-title {
+  color: #000;
+  font-size: 18px;
 }
 
 body {
@@ -4035,11 +4052,14 @@ select {
   }
 
   .products .products__catalog .products__catalog--choice {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .products .products__catalog .products__catalog--list .products__block-list .products__block-item {
-    width: auto;
+    position: relative;
+    float: left;
+    width: 31%;
+    margin: 0 2% 1.5% 0;
   }
 
   .products .products__catalog .products__catalog--list .products__block-list {
@@ -4164,10 +4184,18 @@ select {
   }
 
   .products-catalog {
-    padding: 223px 0;
+    padding: 120px 0 100px;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #eaeff3));
     background: -o-linear-gradient(top, transparent 50%, #eaeff3 50%);
     background: linear-gradient(180deg, transparent 50%, #eaeff3 50%);
+  }
+
+  .product__page--slider .products__block h3.products__block-title {
+    font-size: 36px;
+  }
+
+  .product__page--slider {
+    padding: 60px 0;
   }
 
   .container {
@@ -4319,6 +4347,7 @@ select {
     background: rgba(255, 255, 255, 0.3);
     border: 2px solid rgba(255, 255, 255, 0.3);
     color: #fff;
+    font-size: 24px;
   }
 
   section.touch {

@@ -1,6 +1,7 @@
 @@include('libs/gsap.js')
 @@include('libs/imagesloaded.js')
 @@include('libs/swiper.min.js')
+@@include('libs/isotop.min.js')
 
 @@include('custom/gsap-slider.js')
 @@include('custom/webp.js')
@@ -10,5 +11,6 @@
 @@include('custom/popup.js')
 @@include('custom/btn-hover.js')
 @@include('custom/slider.js')
-@@include('custom/height.js')
+@@include('custom/filter.js')
+@@include('custom/href.js')
 

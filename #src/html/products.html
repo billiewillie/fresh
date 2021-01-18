@@ -2,7 +2,6 @@
 <html lang="en">
 @@include("parts/_head.html")
 <body>
-<!--  @@include("parts/_loader.html")-->
   <div class="wrapper">
   @@include("parts/_header.html")
   <main class="main">
@@ -18,36 +17,36 @@
         <div class="products__catalog">
           <div class="products__catalog--choice">
             <form action="" class="hidden__sm">
-              <select name="" id="">
-                <option value="Все продукты">Все продукты</option>
-                <option value="Сэндвичи">Сэндвичи</option>
-                <option value="Багеты">Багеты</option>
-                <option value="Панини">Панини</option>
-                <option value="Роллы">Роллы</option>
+              <select name="" id="selectId">
+                <option value="all_goods">Все продукты</option>
+                <option value="sandwich">Сэндвичи</option>
+                <option value="buget">Багеты</option>
+                <option value="panini">Панини</option>
+                <option value="roll">Роллы</option>
               </select>
             </form>
-            <ul class="list visible__sm">
+            <ul class="list visible__sm filters-button">
               <li class="item">
-                <a class="active" href="/products.html">Все продукты</a>
+                <a class="active filter-btn" data-filter="*">Все продукты</a>
               </li>
               <li class="item">
-                <a href="">Сэндвичи</a>
+                <a class="filter-btn" data-filter=".sandwich">Сэндвичи</a>
               </li>
               <li class="item">
-                <a href="">Багеты</a>
+                <a class="filter-btn" data-filter=".buget">Багеты</a>
               </li>
               <li class="item">
-                <a href="">Панини</a>
+                <a class="filter-btn" data-filter=".panini">Панини</a>
               </li>
               <li class="item">
-                <a href="">Роллы</a>
+                <a class="filter-btn" data-filter=".roll">Роллы</a>
               </li>
             </ul>
           </div>
           <div class="products__catalog--list">
             <div class="products__block visible__sm">
-              <ul class="products__block-list">
-                <li class="products__block-item new hit">
+              <ul class="products__block-list grid">
+                <li class="products__block-item element-item new hit sandwich" data-category="sandwich">
                   <a href="/product.html">
                     <div class="card">
                       <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
@@ -73,16 +72,16 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-                <li class="products__block-item hit">
+                <li class="products__block-item element-item new sandwich" data-category="sandwich">
                   <a href="/product.html">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Сэндвич<span>“ростбиф”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/sandwich/sandwich-2.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -99,16 +98,16 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-                <li class="products__block-item new">
-                  <a href="/">
+                <li class="products__block-item element-item sandwich" data-category="sandwich">
+                  <a href="/product.html">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Сэндвич<span>“цыпленок гриль”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/sandwich/sandwich-3.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -125,16 +124,16 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-                <li class="products__block-item">
-                  <a href="/">
+                <li class="products__block-item element-item new hit sandwich" data-category="sandwich">
+                  <a href="/product.html">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Сэндвич<span>“цыпленок, бекон и яйцо”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/sandwich/sandwich-4.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -151,28 +150,16 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-                <li class="products__block-item empty-card">
-                  <a>
+                <li class="products__block-item element-item new sandwich" data-category="sandwich">
+                  <a href="/product.html">
                     <div class="card">
-                      <p>Скоро новинка!</p>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="products__block hidden__sm">
-              <h3 class="products__block-title">Сэндвичи</h3>
-              <ul class="products__block-list">
-                <li class="products__block-item new hit">
-                  <a href="/">
-                    <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Сэндвич<span>“ветчина и сыр”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/sandwich/sandwich-5.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -189,16 +176,16 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-                <li class="products__block-item hit">
-                  <a href="/">
+                <li class="products__block-item element-item hit sandwich" data-category="sandwich">
+                  <a href="/product.html">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Сэндвич<span>“салями, ветчина и сыр”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/sandwich/sandwich-6.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -215,16 +202,17 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-                <li class="products__block-item new">
-                  <a href="/">
+
+                <li class="products__block-item element-item hit roll" data-category="roll">
+                  <a href="/product.html">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Ролл<span>“жюльен с грибами”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/roll/roll-1.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -241,16 +229,16 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-                <li class="products__block-item">
-                  <a href="/">
+                <li class="products__block-item element-item hit roll" data-category="roll">
+                  <a href="/product.html">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Ролл<span>“с ветчиной, сыром и овощами”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/roll/roll-2.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -267,21 +255,16 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-              </ul>
-            </div>
-            <div class="products__block hidden__sm">
-              <h3 class="products__block-title">Сэндвичи</h3>
-              <ul class="products__block-list">
-                <li class="products__block-item new hit">
-                  <a href="/">
+                <li class="products__block-item element-item hit roll" data-category="roll">
+                  <a href="/product.html">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Ролл<span>“с цыпленком, яйцом и беконом”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/roll/roll-3.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -298,16 +281,16 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-                <li class="products__block-item hit">
-                  <a href="/">
+                <li class="products__block-item element-item hit roll" data-category="roll">
+                  <a href="/product.html">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Ролл<span>“с цыпленком и сыром”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/roll/roll-4.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -324,16 +307,16 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-                <li class="products__block-item new">
-                  <a href="/">
+                <li class="products__block-item element-item hit roll" data-category="roll">
+                  <a href="/product.html">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Ролл<span>“мексиканский”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/roll/roll-5.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -350,16 +333,16 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-                <li class="products__block-item">
-                  <a href="/">
+                <li class="products__block-item element-item hit roll" data-category="roll">
+                  <a href="/product.html">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Ролл<span>“с ветчиной, сыром и маринованными огурцами”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/roll/roll-1.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -376,21 +359,17 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-              </ul>
-            </div>
-            <div class="products__block hidden__sm">
-              <h3 class="products__block-title">Сэндвичи</h3>
-              <ul class="products__block-list">
-                <li class="products__block-item new hit">
+
+                <li class="products__block-item element-item new panini" data-category="panini">
                   <a href="/">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Панини<span>“с салями, ветчиной и сыром”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/panini/panini-1.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -407,16 +386,16 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-                <li class="products__block-item hit">
+                <li class="products__block-item element-item new panini" data-category="panini">
                   <a href="/">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Панини<span>“с цыпленком и сыром”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/panini/panini-1.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -433,16 +412,17 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-                <li class="products__block-item new">
+
+                <li class="products__block-item element-item buget" data-category="buget">
                   <a href="/">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Багет<span>“с ветчиной и сыром”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/buget/buget-1.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -459,16 +439,16 @@
                     <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
                   </a>
                 </li>
-                <li class="products__block-item">
+                <li class="products__block-item element-item buget" data-category="buget">
                   <a href="/">
                     <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                      <h4 class="item__title">Багет<span>“с салями, ветчиной и сыром”</span></h4>
                       <div class="item__picture">
                         <div class="labels">
                           <span class="new">New</span>
                           <span class="hit">Хит</span>
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
+                        <img src="../img/products/buget/buget-1.png">
                       </div>
                       <div class="item__spec">
                         <div class="item__spec-block spec--weight">
@@ -487,114 +467,443 @@
                 </li>
               </ul>
             </div>
-            <div class="products__block hidden__sm">
-              <h3 class="products__block-title">Сэндвичи</h3>
-              <ul class="products__block-list">
-                <li class="products__block-item new hit">
-                  <a href="/">
-                    <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
-                      <div class="item__picture">
-                        <div class="labels">
-                          <span class="new">New</span>
-                          <span class="hit">Хит</span>
+            <div id="all_goods" class="products__block--wrapper hidden__sm">
+              <div id="sandwich" class="products__block">
+                <h3 class="products__block-title">Сэндвичи</h3>
+                <ul class="products__block-list">
+                  <li class="products__block-item new hit">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/sandwich/sandwich-1.png">
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
-                      </div>
-                      <div class="item__spec">
-                        <div class="item__spec-block spec--weight">
-                          <p>150 г</p>
-                        </div>
-                        <div class="item__spec-block spec--temperature">
-                          <p>0&#176; -2&#176;</p>
-                        </div>
-                        <div class="item__spec-block spec--frozen">
-                          <p>-18&#176;</p>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
-                  </a>
-                </li>
-                <li class="products__block-item hit">
-                  <a href="/">
-                    <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
-                      <div class="item__picture">
-                        <div class="labels">
-                          <span class="new">New</span>
-                          <span class="hit">Хит</span>
-                        </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
-                      </div>
-                      <div class="item__spec">
-                        <div class="item__spec-block spec--weight">
-                          <p>150 г</p>
-                        </div>
-                        <div class="item__spec-block spec--temperature">
-                          <p>0&#176; -2&#176;</p>
-                        </div>
-                        <div class="item__spec-block spec--frozen">
-                          <p>-18&#176;</p>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
-                  </a>
-                </li>
-                <li class="products__block-item new">
-                  <a href="/">
-                    <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
-                      <div class="item__picture">
-                        <div class="labels">
-                          <span class="new">New</span>
-                          <span class="hit">Хит</span>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item hit">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Сэндвич<span>“ростбиф”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/sandwich/sandwich-2.png">
                         </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
-                      </div>
-                      <div class="item__spec">
-                        <div class="item__spec-block spec--weight">
-                          <p>150 г</p>
-                        </div>
-                        <div class="item__spec-block spec--temperature">
-                          <p>0&#176; -2&#176;</p>
-                        </div>
-                        <div class="item__spec-block spec--frozen">
-                          <p>-18&#176;</p>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
-                  </a>
-                </li>
-                <li class="products__block-item">
-                  <a href="/">
-                    <div class="card">
-                      <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
-                      <div class="item__picture">
-                        <div class="labels">
-                          <span class="new">New</span>
-                          <span class="hit">Хит</span>
-                        </div>
-                        <img src="../img/products/sandwich/sandwich-1.png">
-                      </div>
-                      <div class="item__spec">
-                        <div class="item__spec-block spec--weight">
-                          <p>150 г</p>
-                        </div>
-                        <div class="item__spec-block spec--temperature">
-                          <p>0&#176; -2&#176;</p>
-                        </div>
-                        <div class="item__spec-block spec--frozen">
-                          <p>-18&#176;</p>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
-                  </a>
-                </li>
-              </ul>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item new">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Сэндвич<span>“цыпленок гриль”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/sandwich/sandwich-3.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Сэндвич<span>“цыпленок, бекон и яйцо”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/sandwich/sandwich-4.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item new">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Сэндвич<span>“ветчина и сыр”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/sandwich/sandwich-5.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Сэндвич<span>“салями, ветчина и сыр”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/sandwich/sandwich-6.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div id="roll" class="products__block">
+                <h3 class="products__block-title">Роллы</h3>
+                <ul class="products__block-list">
+                  <li class="products__block-item new hit">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Ролл<span>“жюльен с грибами”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/roll/roll-1.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item hit">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Ролл<span>“с ветчиной, сыром и овощами”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/roll/roll-2.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item new">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Ролл<span>“с цыпленком, яйцом и беконом”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/roll/roll-3.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Ролл<span>“с цыпленком и сыром”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/roll/roll-4.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item new">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Ролл<span>“мексиканский”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/roll/roll-5.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Ролл<span>“с ветчиной, сыром и маринованными огурцами”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/roll/roll-6.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div id="panini" class="products__block">
+                <h3 class="products__block-title">Панини</h3>
+                <ul class="products__block-list">
+                  <li class="products__block-item new hit">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Панини<span>“с салями, ветчиной и сыром”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/panini/panini-1.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item hit">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Панини<span>“с цыпленком и сыром”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/panini/panini-1.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div id="buget" class="products__block">
+                <h3 class="products__block-title">Багеты</h3>
+                <ul class="products__block-list">
+                  <li class="products__block-item new hit">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Багет<span>“с ветчиной и сыром”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/buget/buget-1.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item hit">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Багет<span>“с салями, ветчиной и сыром”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/buget/buget-1.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

@@ -106,18 +106,18 @@ function gsapSliderInit() {
     return gsap.isTweening('.project')
   }
 
+  const TIME = 5000
+  let timerId = setInterval(() => {
+    const nextStep = wrapper(currentStep + 1)
+    !isTweening() && transition('next', nextStep)
+  }, TIME);
+
+
   // document.querySelector('button.next').addEventListener('click', e => {
   //   e.preventDefault()
   //   const isLast = currentStep === totalSlides
   //   const nextStep = wrapper(currentStep + 1)
   //   !isTweening() && transition('next', nextStep)
-  // })
-  //
-  // document.querySelector('button.prev').addEventListener('click', e => {
-  //   e.preventDefault()
-  //   const isFirst = currentStep === 0
-  //   const prevStep = wrapper(currentStep - 1)
-  //   !isTweening() && transition('prev', prevStep)
   // })
 
   function updateClass(projectClass) {
@@ -187,6 +187,6 @@ function gsapSliderInit() {
   createNavigation()
 }
 
-let desktop = window.matchMedia('(min-width: 992px)');
-if(desktop.matches && first) window.gsapSliderInit();
+let desktop = window.matchMedia('(min-width: 992px)')
+if(desktop.matches && first) window.gsapSliderInit()
 

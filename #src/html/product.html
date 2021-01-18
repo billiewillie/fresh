@@ -19,29 +19,17 @@
           <div class="products__catalog products__catalog--card">
             <div class="products__catalog--choice">
               <form action="" class="hidden__sm">
-                <select name="" id="">
-                  <option value="Все продукты">Все продукты</option>
-                  <option value="Сэндвичи">Сэндвичи</option>
-                  <option value="Багеты">Багеты</option>
-                  <option value="Панини">Панини</option>
-                  <option value="Роллы">Роллы</option>
+                <select id="selectHref">
+                  <option value="sandwich">Сэндвичи</option>
+                  <option value="all_goods">Все продукты</option>
                 </select>
               </form>
               <ul class="list visible__sm">
                 <li class="item">
-                  <a class="active" href="/products.html">Все продукты</a>
+                  <a href="/products.html">Все продукты</a>
                 </li>
                 <li class="item">
-                  <a href="">Сэндвичи</a>
-                </li>
-                <li class="item">
-                  <a href="">Багеты</a>
-                </li>
-                <li class="item">
-                  <a href="">Панини</a>
-                </li>
-                <li class="item">
-                  <a href="">Роллы</a>
+                  <a class="active">Сэндвичи</a>
                 </li>
               </ul>
             </div>
@@ -152,7 +140,185 @@
           </div>
         </div>
       </div>
-      @@include("parts/_catalog.html")
+      <div class="product__page--slider">
+        <div class="container">
+          <div class="products__block">
+            <h3 class="products__block-title">Все продукты</h3>
+            <div class="products__slider">
+              <div class="swiper-container">
+                <ul class="products__block-list swiper-wrapper">
+                  <li class="products__block-item swiper-slide new hit">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Сэндвич<span>“ростбиф на зерновом хлебе”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/sandwich/sandwich-1.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф на зерновом хлебе</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item swiper-slide hit">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Сэндвич<span>“ростбиф”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/sandwich/sandwich-2.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ростбиф</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item swiper-slide new">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Сэндвич<span>“цыпленок гриль”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/sandwich/sandwich-3.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">салями</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item swiper-slide">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Сэндвич<span>“цыпленок, бекон и яйцо”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/sandwich/sandwich-4.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">цыпленок гриль</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item swiper-slide hit">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Сэндвич<span>“ветчина и сыр”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/sandwich/sandwich-5.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">цыпленок, бекон и яйцо</h4>
+                    </a>
+                  </li>
+                  <li class="products__block-item swiper-slide new">
+                    <a href="/">
+                      <div class="card">
+                        <h4 class="item__title">Сэндвич<span>“салями, ветчина и сыр”</span></h4>
+                        <div class="item__picture">
+                          <div class="labels">
+                            <span class="new">New</span>
+                            <span class="hit">Хит</span>
+                          </div>
+                          <img src="../img/products/sandwich/sandwich-6.png">
+                        </div>
+                        <div class="item__spec">
+                          <div class="item__spec-block spec--weight">
+                            <p>150 г</p>
+                          </div>
+                          <div class="item__spec-block spec--temperature">
+                            <p>0&#176; -2&#176;</p>
+                          </div>
+                          <div class="item__spec-block spec--frozen">
+                            <p>-18&#176;</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="item__title--bottom">ветчина и сыр</h4>
+                    </a>
+                  </li>
+                </ul>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <div class="swiper-pagination display-none"></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="products-catalog">
+        @@include("parts/_catalog.html")
+      </div>
     </main>
     @@include("parts/_footer.html")
   </div>

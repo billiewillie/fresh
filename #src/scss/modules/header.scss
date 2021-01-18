@@ -10,17 +10,6 @@ header.header {
     border-bottom: 1px solid rgba(255, 255, 255, .3);
     padding-bottom: 12px;
     position: relative;
-    //&::before{
-    //  @extend %pseudo;
-    //  width: 173px;
-    //  height: 186px;
-    //  left: -200px;
-    //  top: -200px;
-    //  background-image: url(../img/first-slides/slide-1/slide-1.png);
-    //  background-size: contain;
-    //  background-repeat: no-repeat;
-    //  background-position: 50% 50%;
-    //}
 
     & .container {
       display: flex;
@@ -75,6 +64,7 @@ header.header {
     z-index: 1;
     transition: all .3s ease;
     transform: translateY(0);
+    cursor: pointer;
     &.btn-up{
       transform: translateY(-300%);
     }
