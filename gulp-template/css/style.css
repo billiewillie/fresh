@@ -3193,30 +3193,40 @@ select {
   background-repeat: no-repeat;
 }
 
-.btn-hover {
+.button {
   overflow: hidden;
   position: relative;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  z-index: 2;
+  display: inline-block;
+  border-radius: 50px;
 }
 
-.btn-hover span {
+.button::after {
   position: absolute;
-  display: block;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  content: '';
   width: 0;
-  height: 0;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
-  -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-  -o-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.4);
+  height: 120%;
+  left: -10%;
+  -webkit-transform: skewX(20deg);
+      -ms-transform: skewX(20deg);
+          transform: skewX(20deg);
   z-index: -1;
 }
 
-.btn-hover:hover span {
-  width: 300%;
-  height: 300px;
+.button:hover::after {
+  left: -10%;
+  width: 120%;
 }
 
 @media (min-width: 768px) {
@@ -3901,6 +3911,10 @@ select {
 
   section.products {
     margin-bottom: 170px;
+  }
+
+  section.production p.subtitle {
+    text-align: center;
   }
 
   section.production a.button {

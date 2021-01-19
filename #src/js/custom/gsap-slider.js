@@ -147,6 +147,11 @@ function gsapSliderInit() {
         if (!isTweening() && currentStep !== index) {
           const direction = index > currentStep ? 'next' : 'prev'
           transition(direction, index)
+          clearInterval(timerId)
+          let timerId = setInterval(() => {
+            const nextStep = wrapper(currentStep + 1)
+            !isTweening() && transition('next', nextStep)
+          }, TIME);
         }
       })
 

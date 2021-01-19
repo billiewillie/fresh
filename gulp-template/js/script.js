@@ -182,6 +182,11 @@ function gsapSliderInit() {
         if (!isTweening() && currentStep !== index) {
           const direction = index > currentStep ? 'next' : 'prev'
           transition(direction, index)
+          clearInterval(timerId)
+          let timerId = setInterval(() => {
+            const nextStep = wrapper(currentStep + 1)
+            !isTweening() && transition('next', nextStep)
+          }, TIME);
         }
       })
 
@@ -295,28 +300,6 @@ window.popupInit = function () {
   })
 }
 window.popupInit()
-const btnHover = document.querySelectorAll('.btn-hover');
-btnHover.forEach(el => {
-  let desktop = window.matchMedia('(min-width: 992px)');
-  if(desktop.matches){
-    el.append(document.createElement("span"))
-    el.addEventListener('mouseenter', ev => {
-      const parentOffset = el.getBoundingClientRect();
-      const relX = ev.pageX - parentOffset.left;
-      const relY = ev.pageY - parentOffset.top;
-      el.querySelector('span').style.top = `${relY}px`;
-      el.querySelector('span').style.left = `${relX}px`;
-    })
-    el.addEventListener('mouseout', ev => {
-      const parentOffset = el.getBoundingClientRect();
-      const relX = ev.pageX - parentOffset.left;
-      const relY = ev.pageY - parentOffset.top;
-      el.querySelector('span').style.top = `${relY}px`;
-      el.querySelector('span').style.left = `${relX}px`;
-    })
-  }
-})
-
 function initProductsSlider () {
   let swiper = Swiper;
   let init = false;

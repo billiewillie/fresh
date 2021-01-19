@@ -209,6 +209,9 @@ section.production {
   & p.subtitle {
     font-size: $fz2;
     margin-bottom: 30px;
+    @media (min-width: $smDesktopWidth){
+      text-align: center;
+    }
   }
 
   & a.button {

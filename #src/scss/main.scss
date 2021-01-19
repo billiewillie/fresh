@@ -2,10 +2,6 @@ body {
   font-family: $mainFont;
   background-color: #fff;
   overflow-y: scroll;
-  //background-image: url(../img/pinguin.jpg);
-  &.webp {
-    //background-image: url(../img/webp/pinguin.webp);
-  }
 }
 
 .wrapper {
@@ -386,40 +382,35 @@ select{
   background-image: url(../img/icons/select.svg);
   background-size: 10px 6px;
   background-position: 90% 50%;
-  //&::before{
-  //  @extend %pseudo;
-  //  width: 10px;
-  //  height: 6px;
-  //  right: 30px;
-  //  top: 0;
-  //  bottom: 0;
-  //  margin: auto;
-  //  background-image: url(../img/icons/select.svg);
-  //  background-size: contain;
-  //  background-position: 50%;
-  //}
-
   background-repeat: no-repeat;
 }
 
-.btn-hover{
+.button{
   overflow: hidden;
   position: relative;
-  & span {
+  transition: .3s;
+  cursor: pointer;
+  z-index: 2;
+  display: inline-block;
+  border-radius: 50px;
+  &::after {
     position: absolute;
-    display: block;
+    transition: .3s;
+    content: '';
     width: 0;
-    height: 0;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
-    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.4);
+    height: 120%;
+    left: -10%;
+    transform: skewX(20deg);
     z-index: -1;
   }
   &:hover {
-    span {
-      width: 300%;
-      height: 300px;
+    &::after {
+      left: -10%;
+      width: 120%;
     }
   }
 }
